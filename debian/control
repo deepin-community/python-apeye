@@ -1,15 +1,56 @@
-Source: template-repository
-Section: unknown
+Source: python-apeye
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               flit,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-apeye-core,
+               python3-cachecontrol,
+               python3-cherrypy3,
+               python3-coincidence,
+               python3-domdf-python-tools,
+               python3-filelock,
+               python3-platformdirs,
+               python3-pytest,
+               python3-pytest-datadir,
+               python3-pytest-httpserver,
+               python3-pytest-regressions,
+               python3-requests,
+               python3-setuptools
+Standards-Version: 4.6.2
+Homepage: https://github.com/domdfcoding/apeye
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-apeye
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-apeye.git
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-apeye
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Description: Handy tools for working with URLs and APIs
+ The "apeye" package is a Python library that makes it easy to make API
+ calls asynchronously and conveniently. It provides a simple way to make
+ HTTP requests, handle responses, and handle errors, all in an asynchronous
+ environment.
+ .
+ Some of the main features of the "apeye" package include:
+  - Ease of Use: It simplifies making API calls with a set of simple and
+    intuitive methods.
+  - Asynchronous Support: The library allows you to make multiple API calls
+    asynchronously, which can improve performance when dealing with concurrent
+    requests.
+  - Response Handling: You can easily access the API response data, including
+    the response body and HTTP headers.
+  - Error Handling: "apeye" handles errors effectively, allowing you to handle
+    exceptions and errors appropriately in your API calls.
+  - Authentication Support: It supports various forms of authentication such as
+    basic authentication, JWT token, OAuth2 and others, making it easier to
+    access protected APIs.
+  - Customization: You can customize request settings such as HTTP headers,
+    query parameters, and more.
+  - Detailed Documentation: The project has extensive documentation that
+    provides detailed information on how to use the library.

@@ -1,0 +1,18 @@
+Description: fix timeout setting
+Author: Josenilson Ferreira da silva <nilsonfsilva@hotmail.com>
+Forwarded: not-needed
+Last-Update: 2023-08-25Index: python-apeye/tox.ini
+===================================================================
+--- python-apeye.orig/tox.ini
++++ python-apeye/tox.ini
+@@ -207,8 +207,8 @@ toplevel = apeye
+ package = apeye
+ 
+ [pytest]
+-addopts = --color yes --durations 25
+-timeout = 300
++addopts = --color yes --durations 25
++pytest --timeout=300
+ filterwarnings =
+     error
+     ignore:can't resolve package from __spec__ or __package__, falling back on __name__ and __path__:ImportWarning
