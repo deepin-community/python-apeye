@@ -1,0 +1,78 @@
+# Configuration for 'repo_helper' (https://github.com/repo-helper/repo_helper)
+---
+modname: 'apeye'
+copyright_years: 2020-2022
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'domdfcoding'
+version: '1.4.1'
+license: 'LGPLv3+'
+short_desc: 'Handy tools for working with URLs and APIs.'
+preserve_custom_theme: true
+standalone_contrib_guide: true
+
+sphinx_html_theme: furo
+min_coverage: 85
+tox_testenv_extras: limiter
+use_flit: true
+
+conda_channels:
+ - conda-forge
+
+python_versions:
+ - '3.6'
+ - '3.7'
+ - '3.8'
+ - '3.9'
+ - "3.10"
+ - "3.11"
+ - 3.12-dev
+ - pypy36
+ - pypy37
+ - pypy38
+ - pypy39
+
+classifiers:
+ - 'Development Status :: 5 - Production/Stable'
+ - 'Intended Audience :: Developers'
+ - "Topic :: Internet :: WWW/HTTP"
+ - 'Topic :: Software Development :: Libraries :: Python Modules'
+
+keywords:
+ - api
+ - url
+ - requests
+ - cache
+ - rest
+
+tox_unmanaged:
+ - testenv
+ - testenv:docs
+
+extras_require:
+  limiter:
+   - cachecontrol[filecache]>=0.12.6
+   - lockfile>=0.12.2
+
+extra_sphinx_extensions:
+ - local_extension
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_toolbox_experimental.missing_xref
+ - autoclass_alias
+
+conda_extras:
+ - limiter
+
+manifest_additional:
+ - include apeye/public_suffix_list.dat
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - needspace_amount = r"5\baselineskip"
+ - "ignore_missing_xrefs = ["
+ - "    '^requests.structures.CaseInsensitiveDict$',"
+ - "    '^cachecontrol.adapter.CacheControlAdapter',"
+ - "]"
+
+exclude_files:
+ - license_rst

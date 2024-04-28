@@ -1,5 +1,20 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-apeye (1.4.1-3) unstable; urgency=medium
 
-  * Initial release
+  * debian/control: Added dependencies for running tests
+  * debian/patches: Removed because dependencies is in Debian
+  * debian/rules: Note partially removed
+  * debian/tests: Reconfigured and added new dependencies
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Mon, 01 Jan 2024 11:05:15 -0300
+
+python-apeye (1.4.1-2) unstable; urgency=medium
+
+  * Source-only upload to allow testing migration
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 31 Oct 2023 21:37:54 -0300
+
+python-apeye (1.4.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1027764)
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sat, 26 Aug 2023 07:33:30 -0300

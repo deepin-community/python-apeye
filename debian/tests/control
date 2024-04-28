@@ -1,0 +1,16 @@
+Test-Command: mkdir -p ${AUTOPKGTEST_TMP}/autopkgtest
+ && cp -r tests ${AUTOPKGTEST_TMP}/autopkgtest
+ && cd ${AUTOPKGTEST_TMP}/autopkgtest/tests
+ && HOME=/tmp python3 -m pytest -v  -p no:warnings --ignore=test_email_validator.py --ignore=test_url.py
+Depends: python3-all,
+         python3-cachecontrol,
+         python3-cherrypy3,
+         python3-coincidence,
+         python3-filelock,
+         python3-pytest,
+         python3-pytest-datadir,
+         python3-pytest-httpserver,
+         python3-pytest-regressions,
+         python3-pytest-timeout,
+         @
+Restrictions: allow-stderr
