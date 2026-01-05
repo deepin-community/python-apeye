@@ -1,3 +1,13 @@
+python-apeye (1.4.1-4) unstable; urgency=medium
+
+  * debian/control:
+     - Added 'Testsuite: autopkgtest-pkg-pybuild'
+     - Bumped Standards-Version to 4.7.0
+     - Updated dh-python to dh-sequence-python3
+  * debian/rules: Replaced flag '--with python3' with dh-sequence-python3
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sat, 15 Jun 2024 15:52:06 -0300
+
 python-apeye (1.4.1-3) unstable; urgency=medium
 
   * debian/control: Added dependencies for running tests
